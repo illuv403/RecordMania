@@ -1,6 +1,14 @@
+using Microsoft.EntityFrameworkCore;
+using RecordMania.DAL;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+var connectionString = builder.Configuration.GetConnectionString("RecordManiaDB")
+    ?? throw new NullReferenceException("No connection string found.");
+
+builder.Services.AddDbContext<RecordManiaDBContext>(options => options.UseSqlServer(connectionString));
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
