@@ -1,0 +1,1 @@
+Before launching the application, please add some additional lines to your appsettings.json file. Those are "ConnectionStrings":{} inside of which you specify your connection string in format "RecordManiaDB" : "xxxxx". Instead of xxxxx you should paste your connection string to your mssql database.
