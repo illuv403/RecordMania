@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecordMania", "RecordMania\RecordMania.csproj", "{14730955-386F-4546-9AAD-A23FBA2E6684}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "src/RecordMania", "src\RecordMania\RecordMania.csproj", "{14730955-386F-4546-9AAD-A23FBA2E6684}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
