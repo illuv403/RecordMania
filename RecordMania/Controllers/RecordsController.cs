@@ -18,8 +18,7 @@ public class RecordsController : ControllerBase
     {
         _context = context;
     }
-
-
+    
     [HttpGet]
     public async Task<IActionResult> GetRecords([FromQuery] DateTime? createdAt, [FromQuery] int? languageId,
         [FromQuery] int? taskId, CancellationToken token)
@@ -52,18 +51,18 @@ public class RecordsController : ControllerBase
         var records = await recordsQuery.Select(r => new RecordDTO
         {
             Id = r.Id,
-            Language =
+            Language = new LanguageDTO
             {
                 Id = r.LanguageId,
                 Name = r.Language.Name
             },
-            Task =
+            Task = new TaskDTO
             {
                 Id = r.TaskId,
                 Name = r.Task.Name,
                 Description = r.Task.Description
             },
-            Student =
+            Student = new StudentDTO
             {
                 Id = r.StudentId,
                 FirstName = r.Student.FirstName,
